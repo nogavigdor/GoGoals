@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap");
+body .nav .logo {
+  color: #271d72;
+  font-size: 62px;
+  background-color: yellow;
+}
+
+body {
+  background-color: #ffccf8;
+}/*# sourceMappingURL=App.css.map */
