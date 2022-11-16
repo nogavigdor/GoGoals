@@ -17,7 +17,7 @@ const App: React.FC = () =>{
        
         <div className= "App">
       
-          Hello from Noga
+          
           <Navbar />
         </div>
     </>//An outer element wrapper

@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap");
-body .nav .logo {
+.nav .logo {
   color: #271d72;
-  font-size: 62px;
-  background-color: yellow;
+  font-size: 32px;
 }
 
 body {

@@ -4,11 +4,9 @@ import ReactDom from 'react-dom/client';
 
 const Navbar:React.FC =()=>{
     return(
-        <nav>
-            hi from nav
-
+        <nav className='nav'>
             <div className='logo'>
-                hi from logo
+                GoGoals
             </div>
         </nav>
     );
