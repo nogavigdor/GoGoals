@@ -1,0 +1,22 @@
+.form-newgoal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  .form-newgoal-input {
+    @extend %form-field;
+  }
+
+  button {
+    @extend %form-field;
+    height: 50px;
+    cursor: pointer;
+    transition: all 800ms ease;
+
+    &:hover {
+      background: adjust-hue($secondary-color, 95);
+    }
+  }
+}
