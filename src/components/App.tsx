@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, MouseEvent } from 'react';
 import ReactDOM from 'react-dom/client';
 import { v4 as uuid } from 'uuid';
 import IGoal from '../Interfaces/IGoal';
@@ -54,6 +54,22 @@ const App  = () =>{
         //initializing the deadline state towards a new entery
         setDeadline(0);
   }
+ /**
+  * 
+  * @param goalToDelete will delete the goal from the GoalsList according the string 
+  * parameter which represents the id of the goal wwhich is to be deleted.
+  */
+  const deleteGoal=(goalToDelete:string):void=>{
+    setGoalsList(
+      GoalsList.filter((goal)=>{
+        return goal.id!=goalToDelete;
+      }
+        )
+       
+
+    );
+      
+  }
 
   return (
     <>
@@ -62,7 +78,7 @@ const App  = () =>{
           <h1>Plan your goals:</h1>
         {/*passing the handle events functions and state variables as props */}
           <InputForm handleChange={handleChange} addGoal={addGoal} goal={goal} deadline={deadline}/>
-          <ShowGoals GoalsList={GoalsList} />
+          <ShowGoals GoalsList={GoalsList} deleteGoal={deleteGoal} />
       </article>
   
     </>//An outer element wrapper
