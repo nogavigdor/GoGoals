@@ -1,6 +1,19 @@
+//general flex column definitions placeholder
+%flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+//general flex row definitions placeholder
+%flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 //this placeholder holds properties values that are common to the form input fields and button
 %form-field {
-  width: 300px;
   padding: 5px;
   margin-bottom: 10px;
   border-radius: 5px;

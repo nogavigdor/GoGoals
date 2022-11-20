@@ -1,31 +1,68 @@
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap");
+.content, .form-newgoal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.show-goals .buttons-container, .show-goals .goal-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .form-newgoal button, .form-newgoal .form-newgoal-input {
-  width: 300px;
   padding: 5px;
   margin-bottom: 10px;
   border-radius: 5px;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto 10%;
+  padding: 10px;
+}
 .nav .logo {
   color: #271d72;
   font-size: 32px;
   font-family: Play, Arial, Helvetica, sans-serif;
 }
+.nav .icon-printer {
+  font-size: 35px;
+}
 
 .form-newgoal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+}
+.form-newgoal .form-newgoal-input {
+  width: 80%;
 }
 .form-newgoal button {
+  width: 80%;
   height: 50px;
   cursor: pointer;
   transition: all 800ms ease;
 }
 .form-newgoal button:hover {
   background: #fff1cc;
+}
+
+.show-goals {
+  width: 100%;
+}
+.show-goals .goal-content {
+  margin: auto 10%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.show-goals .goal-content:first-child {
+  margin-top: 20px;
+}
+.show-goals .buttons-container .icon-trash,
+.show-goals .buttons-container .icon-edit {
+  font-size: 25px;
 }
 
 * {
@@ -36,4 +73,26 @@
 
 body {
   background-color: #ffccf8;
+}
+body h1 {
+  margin: 10px auto;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  border: 1px black solid;
+}
+
+@media (min-width: 768px) {
+  .form-newgoal {
+    width: 50%;
+  }
+  .show-goals {
+    width: 50%;
+  }
 }/*# sourceMappingURL=App.css.map */

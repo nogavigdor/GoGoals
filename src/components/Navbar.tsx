@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom/client';
+import { TfiPrinter } from 'react-icons/tfi';
 
 
 const Navbar =():JSX.Element=>{
@@ -8,6 +9,7 @@ const Navbar =():JSX.Element=>{
             <div className='logo'>
                 GoGoals
             </div>
+            <TfiPrinter className='icon icon-printer'/>
         </nav>
     );
 }

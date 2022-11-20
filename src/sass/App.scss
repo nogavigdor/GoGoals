@@ -3,6 +3,7 @@
 @import "./components/placeholders";
 @import "./components/navbar";
 @import "./components/inputForm";
+@import "./components/showGoals";
 
 * {
   margin: 0;
@@ -12,4 +13,28 @@
 
 body {
   background-color: $secondary-color;
+  h1 {
+    margin: 10px auto;
+  }
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.content {
+  @extend %flex-column;
+  width: 100vw;
+  height: 100vh;
+  border: 1px black solid;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .form-newgoal {
+    width: 50%;
+  }
+
+  .show-goals {
+    width: 50%;
+  }
 }

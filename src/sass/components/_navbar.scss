@@ -1,7 +1,15 @@
 .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto 10%;
+  padding: 10px;
   .logo {
     color: $primary-color;
     font-size: 32px;
     font-family: Play, Arial, Helvetica, sans-serif;
+  }
+  .icon-printer {
+    font-size: 35px;
   }
 }

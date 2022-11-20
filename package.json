@@ -1,5 +1,5 @@
 {
-  "name": "gogogoals",
+  "name": "gogoals",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,14 +9,15 @@
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.3",
     "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.8",
+    "@types/react-dom": "^18.0.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
     "react-scripts": "^5.0.1",
     "sass": "^1.56.1",
     "styled-components": "^5.3.6",
-    "typescript": "^4.8.4",
+    "typescript": "^4.9.3",
+    "uuidv4": "^6.2.13",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
