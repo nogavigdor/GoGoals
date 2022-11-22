@@ -10,11 +10,20 @@
     &:first-child {
       margin-top: 20px;
     }
+
+    .linethrough-true {
+      text-decoration: line-through;
+    }
+
+    .hide {
+      display: none;
+    }
   }
 
   .buttons-container {
     .icon-trash,
-    .icon-edit {
+    .icon-check,
+    .icon-check-undo {
       font-size: 25px;
     }
     @extend %flex-row;

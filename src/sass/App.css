@@ -60,8 +60,15 @@
 .show-goals .goal-content:first-child {
   margin-top: 20px;
 }
+.show-goals .goal-content .linethrough-true {
+  text-decoration: line-through;
+}
+.show-goals .goal-content .hide {
+  display: none;
+}
 .show-goals .buttons-container .icon-trash,
-.show-goals .buttons-container .icon-edit {
+.show-goals .buttons-container .icon-check,
+.show-goals .buttons-container .icon-check-undo {
   font-size: 25px;
 }
 

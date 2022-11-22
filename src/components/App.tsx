@@ -18,6 +18,8 @@ const App  = () =>{
   const [deadline, setDeadline]=useState<number>(0);
   //GoalsList is defined to be a set of arrays which will contains the all the goals = an array of objects of IGoal type
   const [GoalsList, setGoalsList]=useState<IGoal[]>([]);
+  
+  
   //this function will update the goal and deadline states with their respective input fields
   //the type annotation of the event parameter is the TheChange event type, which has a target property which reffers to the HTML Input element.
   //Since the function doesn't return anything, it's return type annoration is void.
@@ -32,15 +34,18 @@ const App  = () =>{
       setGoal(event.target.value);
     //other wise the deadline state should be updated with the deadline input
     } else {
-      setDeadline(Number(event.target.value));
+      //assigning the deadline inputninto a const variable
+      const deadlineInput=Number(event.target.value);
+      //preventing the user from entering a negative number as a deadline
+      setDeadline(deadlineInput>=0?deadlineInput:0);
     }
 
   }
-  //when the use press the submit button a goal will be added to the goals list
-  //This function receives and event of form event type which is target in html from Element.
+  //when the user press the submit button a goal will be added to the goals list
+  //This function receives an event of form event type which is target in html from Element.
   /**
    * 
-   * @param event 
+   * @param event of html input type
    * @returns void
    */
   const addGoal = (event: React.FormEvent<HTMLFormElement>):void => {
@@ -57,7 +62,7 @@ const App  = () =>{
  /**
   * 
   * @param goalToDelete will delete the goal from the GoalsList according the string 
-  * parameter which represents the id of the goal wwhich is to be deleted.
+  * parameter which represents the id of the goal which is to be deleted.
   */
   const deleteGoal=(goalToDelete:string):void=>{
     setGoalsList(
@@ -71,6 +76,27 @@ const App  = () =>{
       
   }
 
+
+/**
+ * The function creates a new GoalsList with the updated isCompleted property 
+ * which is false for en uncompleted goal and true for a completed goal
+ * @param goalCompleted is and id of the goal that was completed
+ * @returns void
+ */
+
+  const completeGoal=(goalCompleted:string):void=>{
+
+        const newGoalsList = GoalsList.map((goal) => {
+          if(goal.id === goalCompleted){
+            return {...goal, isCompleted: !goal.isCompleted}
+          } else {
+             return {...goal}
+          }
+       });  
+       
+       setGoalsList(newGoalsList);
+  }
+
   return (
     <>
       <Navbar/>
@@ -78,7 +104,7 @@ const App  = () =>{
           <h1>Plan your goals:</h1>
         {/*passing the handle events functions and state variables as props */}
           <InputForm handleChange={handleChange} addGoal={addGoal} goal={goal} deadline={deadline}/>
-          <ShowGoals GoalsList={GoalsList} deleteGoal={deleteGoal} />
+          <ShowGoals GoalsList={GoalsList} deleteGoal={deleteGoal} completeGoal={completeGoal}/>
       </article>
   
     </>//An outer element wrapper
