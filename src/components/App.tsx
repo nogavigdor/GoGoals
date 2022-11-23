@@ -1,5 +1,5 @@
-import React, { useState, MouseEvent } from 'react';
-import ReactDOM from 'react-dom/client';
+import React, { useState } from 'react';
+//import ReactDOM from 'react-dom/client';
 import { v4 as uuid } from 'uuid';
 import IGoal from '../Interfaces/IGoal';
 import Navbar from './Navbar';
@@ -67,7 +67,7 @@ const App  = () =>{
   const deleteGoal=(goalToDelete:string):void=>{
     setGoalsList(
       GoalsList.filter((goal)=>{
-        return goal.id!=goalToDelete;
+        return goal.id!==goalToDelete;
       }
         )
        

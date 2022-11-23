@@ -1,9 +1,9 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 //import { TfiPencil } from 'react-icons/tfi';
 import { TfiTrash } from 'react-icons/tfi';
 import { TfiCheck } from 'react-icons/tfi';
 import { TfiBackRight } from "react-icons/tfi";
-import ReactDOM from 'react-dom/client';
+//import ReactDOM from 'react-dom/client';
 import IGoal from '../Interfaces/IGoal';
 import IShowGoals from '../Interfaces/IShowGoals';
 
@@ -25,7 +25,7 @@ const ShowGoals = ({GoalsList, deleteGoal, completeGoal}:IShowGoals):JSX.Element
    */
                         GoalsList.map((item:IGoal)=>{
                           return  <div className='goal-content' key={item.id}>
-                            <span className={item.isCompleted ?  'linethrough-true':''}>{`${item.isCompleted}  ${item.goal} to be completed in ${item.deadline} days.`} </span>
+                            <span className={item.isCompleted ?  'linethrough-true':''}>{`${item.goal} to be completed in ${item.deadline} days.`} </span>
                             <span className='buttons-container'>
                             <button onClick={()=>{ 
                                 deleteGoal(item.id);
