@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-//import ReactDOM from 'react-dom/client';
 import { v4 as uuid } from 'uuid';
 import IGoal from '../Interfaces/IGoal';
 import Navbar from './Navbar';
